@@ -10,6 +10,17 @@ let titleOpacity = 0;
 const app = document.querySelector('#app');
 const title = document.querySelector('#title');
 
+let touchTarget;
+
+document.addEventListener('touchmove', event => {
+  const newTarget = document.elementFromPoint(event.touches[0].pageX, event.touches[0].pageY);
+
+  if (newTarget !== touchTarget) {
+    touchTarget = newTarget;
+    cascade(touchTarget, 0);
+  }
+});
+
 function createDivs() {
   app.innerHTML = '';
 
@@ -22,6 +33,10 @@ function createDivs() {
       populateCharacter(div);
       div.className = `c${j} r${i}`;
       div.addEventListener('mouseover', () => {
+        cascade(div, 0);
+        transformTitle();
+      });
+      div.addEventListener('touchstart', event => {
         cascade(div, 0);
         transformTitle();
       });
@@ -41,13 +56,13 @@ function changeColor(element) {
   element.style.color = colors[Math.floor(Math.random() * colors.length)];
 }
 
-function selectDiv(x, y) { 
+function selectDiv(x, y) {
   return document.querySelector(`.c${x}.r${y}`);
 }
 
 function cascade(element, steps) {
   if (!element) return;
-  
+
   steps += 1;
   if (steps >= 6) return;
 
@@ -108,7 +123,7 @@ function transformTitle() {
     titleOpacity += 0.002;
     title.style.opacity = titleOpacity;
   }
-  
+
   if (Math.random() < 0.1) changeColor(title);
 }
 
