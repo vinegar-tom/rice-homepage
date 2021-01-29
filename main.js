@@ -18,6 +18,7 @@ document.addEventListener('touchmove', event => {
   if (newTarget !== touchTarget) {
     touchTarget = newTarget;
     cascade(touchTarget, 0);
+    transformTitle();
   }
 });
 
@@ -76,7 +77,7 @@ function cascade(element, steps) {
     y: parseInt(element.classList.item(1).slice(1))
   }
 
-  let aleatory = [];
+  const aleatory = [];
   while (aleatory.length < 9) {
     aleatory.push(Math.random());
   }
