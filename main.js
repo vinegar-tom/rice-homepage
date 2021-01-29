@@ -46,7 +46,12 @@ function createDivs() {
 }
 
 function populateCharacter(element) {
-  const glyphs = ['a', 'r', 'f', 'B', '0', 'l', '3', '8', '{', '=', 'Њ', '@', 'Ξ', '-'];
+  const glyphs = [
+    'r', 'ґ', 'Я',
+    'i', ';', 'ΐ',
+    'c', '¢', '©',
+    'e', '€', 'э'
+  ];
   element.innerHTML = glyphs[Math.floor(Math.random() * glyphs.length)];
 }
 
