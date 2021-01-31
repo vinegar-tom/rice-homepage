@@ -110,6 +110,8 @@ const createDivs = () => {
   }
 };
 
+document.addEventListener('selectstart', event => event.preventDefault());
+
 window.onresize = () => {
   windowSize.x = window.innerWidth;
   windowSize.y = window.innerHeight;
