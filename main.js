@@ -5,10 +5,7 @@ const windowSize = {
   rows: undefined
 };
 
-let titleOpacity = 0;
-
 const app = document.querySelector('#app');
-const title = document.querySelector('#title');
 
 let touchTarget;
 
@@ -18,7 +15,6 @@ document.addEventListener('touchmove', event => {
   if (newTarget !== touchTarget) {
     touchTarget = newTarget;
     cascade(touchTarget, 0);
-    transformTitle();
   }
 });
 
@@ -33,15 +29,10 @@ function createDivs() {
       const div = document.createElement('div');
       populateCharacter(div);
       div.className = `c${j} r${i}`;
-      div.addEventListener('mouseover', () => {
-        cascade(div, 0);
-        transformTitle();
-      });
-      div.addEventListener('touchstart', event => {
-        cascade(div, 0);
-        transformTitle();
-      });
       app.appendChild(div);
+
+      div.addEventListener('mouseover', () => cascade(div, 0));
+      div.addEventListener('touchstart', () => cascade(div, 0));
     }
   }
 }
@@ -116,21 +107,6 @@ function cascade(element, steps) {
       cascade(selectDiv(target.x - 1, target.y + 1), steps);
     }
   }, aleatory.shift() * 100 + steps * 30 + 100);
-}
-
-function transformTitle() {
-  if (titleOpacity < 0.1) {
-    titleOpacity += 0.0002;
-    title.style.opacity = titleOpacity;
-  } else if (titleOpacity < 0.5) {
-    titleOpacity += 0.001;
-    title.style.opacity = titleOpacity;
-  } else if (titleOpacity < 1) {
-    titleOpacity += 0.002;
-    title.style.opacity = titleOpacity;
-  }
-
-  if (Math.random() < 0.1) changeColor(title);
 }
 
 window.onresize = () => {
