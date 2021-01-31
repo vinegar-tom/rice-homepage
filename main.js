@@ -1,8 +1,6 @@
 const windowSize = {
   x: window.innerWidth,
-  y: window.innerHeight,
-  columns: undefined,
-  rows: undefined
+  y: window.innerHeight
 };
 
 const app = document.querySelector('#app');
@@ -21,11 +19,11 @@ document.addEventListener('touchmove', event => {
 function createDivs() {
   app.innerHTML = '';
 
-  windowSize.columns = Math.floor(windowSize.x / 28);
-  windowSize.rows = Math.floor(windowSize.y / 28) + 1;
+  const columns = Math.floor(windowSize.x / 28);
+  const rows = Math.floor(windowSize.y / 28) + 1;
 
-  for (let i = 0; i < windowSize.rows; i++) {
-    for (let j = 0; j < windowSize.columns; j++) {
+  for (let i = 0; i < rows; i++) {
+    for (let j = 0; j < columns; j++) {
       const div = document.createElement('div');
       populateCharacter(div);
       div.className = `c${j} r${i}`;
