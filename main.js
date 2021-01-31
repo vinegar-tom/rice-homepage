@@ -1,41 +1,11 @@
+const app = document.querySelector('#app');
+
 const windowSize = {
   x: window.innerWidth,
   y: window.innerHeight
 };
 
-const app = document.querySelector('#app');
-
-let touchTarget;
-
-document.addEventListener('touchmove', event => {
-  const newTarget = document.elementFromPoint(event.touches[0].pageX, event.touches[0].pageY);
-
-  if (newTarget !== touchTarget) {
-    touchTarget = newTarget;
-    cascade(touchTarget, 0);
-  }
-});
-
-function createDivs() {
-  app.innerHTML = '';
-
-  const columns = Math.floor(windowSize.x / 28);
-  const rows = Math.floor(windowSize.y / 28) + 1;
-
-  for (let i = 0; i < rows; i++) {
-    for (let j = 0; j < columns; j++) {
-      const div = document.createElement('div');
-      populateCharacter(div);
-      div.className = `c${j} r${i}`;
-      app.appendChild(div);
-
-      div.addEventListener('mouseover', () => cascade(div, 0));
-      div.addEventListener('touchstart', () => cascade(div, 0));
-    }
-  }
-}
-
-function populateCharacter(element) {
+const populateCharacter = element => {
   const glyphs = [
     'r', 'ґ', 'Я',
     'i', ';', 'ΐ',
@@ -43,19 +13,19 @@ function populateCharacter(element) {
     'e', '€', 'э'
   ];
   element.innerHTML = glyphs[Math.floor(Math.random() * glyphs.length)];
-}
+};
 
-function changeColor(element) {
+const changeColor = element => {
   // https://lospec.com/palette-list/slso8
   const colors = ['#203c56', '#544e68', '#8d697a', '#d08159', '#ffaa5e', '#ffd4a3', '#ffecd6']
   element.style.color = colors[Math.floor(Math.random() * colors.length)];
-}
+};
 
-function selectDiv(x, y) {
+const selectDiv = (x, y) => {
   return document.querySelector(`.c${x}.r${y}`);
-}
+};
 
-function cascade(element, steps) {
+const cascade = (element, steps) => {
   if (!element) return;
 
   steps += 1;
@@ -105,7 +75,40 @@ function cascade(element, steps) {
       cascade(selectDiv(target.x - 1, target.y + 1), steps);
     }
   }, aleatory.shift() * 100 + steps * 30 + 100);
-}
+};
+
+let touchTarget;
+
+document.addEventListener('touchmove', event => {
+  const newTarget = document.elementFromPoint(
+    event.touches[0].pageX,
+    event.touches[0].pageY
+  );
+
+  if (newTarget !== touchTarget) {
+    touchTarget = newTarget;
+    cascade(touchTarget, 0);
+  }
+});
+
+const createDivs = () => {
+  app.innerHTML = '';
+
+  const columns = Math.floor(windowSize.x / 28);
+  const rows = Math.floor(windowSize.y / 28) + 1;
+
+  for (let i = 0; i < rows; i++) {
+    for (let j = 0; j < columns; j++) {
+      const div = document.createElement('div');
+      populateCharacter(div);
+      div.className = `c${j} r${i}`;
+      app.appendChild(div);
+
+      div.addEventListener('mouseover', () => cascade(div, 0));
+      div.addEventListener('touchstart', () => cascade(div, 0));
+    }
+  }
+};
 
 window.onresize = () => {
   windowSize.x = window.innerWidth;
