@@ -17,7 +17,7 @@ const populateCharacter = element => {
 
 const changeColor = element => {
   // https://lospec.com/palette-list/slso8
-  const colors = ['#203c56', '#544e68', '#8d697a', '#d08159', '#ffaa5e', '#ffd4a3', '#ffecd6']
+  const colors = ['#203c56', '#544e68', '#8d697a', '#d08159', '#ffaa5e', '#ffd4a3'];
   element.style.color = colors[Math.floor(Math.random() * colors.length)];
 };
 
@@ -29,7 +29,8 @@ const cascade = (element, steps) => {
   if (!element) return;
 
   steps += 1;
-  if (steps >= 6) return;
+
+  if (!element.classList.item(0)) return;
 
   const target = {
     x: parseInt(element.classList.item(0).slice(1)),
@@ -37,11 +38,10 @@ const cascade = (element, steps) => {
   }
 
   const aleatory = [];
-  while (aleatory.length < 9) {
+  while (aleatory.length < 5) {
     aleatory.push(Math.random());
   }
-  const ADJACENT_CHANCE = 0.2;
-  const DIAGONAL_CHANCE = ADJACENT_CHANCE / 1.414;
+  const ADJACENT_CHANCE = 0.7 / steps;
 
   populateCharacter(element);
   changeColor(element);
@@ -60,21 +60,7 @@ const cascade = (element, steps) => {
     if (aleatory.shift() < ADJACENT_CHANCE) {
       cascade(selectDiv(target.x + 1, target.y), steps);
     }
-
-    // Diagonals
-    if (aleatory.shift() < DIAGONAL_CHANCE) {
-      cascade(selectDiv(target.x - 1, target.y - 1), steps);
-    }
-    if (aleatory.shift() < DIAGONAL_CHANCE) {
-      cascade(selectDiv(target.x + 1, target.y - 1), steps);
-    }
-    if (aleatory.shift() < DIAGONAL_CHANCE) {
-      cascade(selectDiv(target.x + 1, target.y + 1), steps);
-    }
-    if (aleatory.shift() < DIAGONAL_CHANCE) {
-      cascade(selectDiv(target.x - 1, target.y + 1), steps);
-    }
-  }, aleatory.shift() * 100 + steps * 30 + 100);
+  }, aleatory.shift() * 10 + steps * 20 + 20);
 };
 
 let touchTarget;
