@@ -39,3 +39,7 @@ nav {
   font-size: calc(1.4rem + 0.5vw);
   display: inline-block;
 }
+
+strong {
+  color: #ffd4a3;
+}
