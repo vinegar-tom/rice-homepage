@@ -39,35 +39,3 @@ html * {
 #menu > ul {
   list-style-type: none;
 }
-
-a {
-  margin: 0.2em;
-  padding-inline: 0.5em;
-  background: #0d2b45;
-  box-shadow: 5px 5px #544e68;
-  border: 2px solid #ffecd6;
-  color: #ffecd6;
-  display: block;
-  text-decoration: none;
-  transform: skewX(-5deg);
-}
-
-a > span {
-  display: block;
-  transform: skewX(5deg);
-}
-
-a:focus,
-a:hover {
-  background: #ffecd6;
-  box-shadow: 5px 5px #544e68;
-  border: 2px solid #ffecd6;
-  color: #0d2b45;
-}
-
-a:active {
-  background: #ffaa5e;
-  box-shadow: 5px 5px #544e68;
-  border: 2px solid #ffaa5e;
-  color: #0d2b45;
-}

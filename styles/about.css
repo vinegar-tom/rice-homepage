@@ -1,7 +1,41 @@
 html {
-  font-size: 20px;
+  font-size: 16px;
   line-height: 1.4;
   font-family: 'Fira Mono', monospace;
   color: #ffecd6;
   background-color: #0d2b45;
+}
+
+body {
+  margin: 0 auto 4rem;
+  max-width: 800px;
+  padding: 1rem 2rem;
+}
+
+main {
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-size: calc(2rem + 1vw);
+  background-color: #544e68;
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding-inline: 1rem;
+  transform: skewX(-5deg);
+}
+
+h1 > span {
+  display: block;
+  transform: skewX(5deg);
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: calc(0.8rem + 0.5vw);
+}
+
+nav {
+  font-size: calc(1.4rem + 0.5vw);
+  display: inline-block;
 }
