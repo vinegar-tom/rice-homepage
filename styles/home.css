@@ -1,0 +1,42 @@
+html,
+html * {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  overflow: hidden;
+}
+
+#app {
+  font-family: 'Fira Mono', monospace;
+  cursor: crosshair;
+  color: var(--med-blue);
+  background-color: var(--dark-blue);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.4;
+  font-size: 1.25rem;
+}
+
+#app > div {
+  /* Flex must be exactly 28px for script */
+  flex: 1 28px;
+  text-align: center;
+}
+
+nav.main {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: calc(2.5rem + 1vw);
+  text-align: center;
+}
+
+nav.main > ul {
+  list-style-type: none;
+}

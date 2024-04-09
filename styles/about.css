@@ -1,0 +1,67 @@
+body {
+  margin: 0 auto;
+  max-width: 50rem;
+  padding: 1rem 1rem 2rem;
+}
+
+main {
+  margin-bottom: 4rem;
+}
+
+h1,
+h2 {
+  font-size: calc(2rem + 0.5vw);
+  background-color: var(--med-blue);
+  box-shadow: 5px 5px var(--pink);
+  border: 2px solid var(--white);
+  display: block;
+  padding-inline: 1.5rem;
+  font-weight: 800;
+  width: fit-content;
+}
+
+h1 {
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
+  margin-inline: auto;
+}
+
+h2 {
+  font-size: calc(1.6rem + 0.4vw);
+  background-color: var(--dark-blue);
+  border-top: none;
+  border-left: none;
+  box-shadow: none;
+  margin-top: 2.5rem;
+}
+
+main p,
+main li {
+  font-size: calc(1rem + 0.25vw);
+  font-family: 'Libre Baskerville', serif;
+}
+
+nav {
+  display: inline-block;
+}
+
+strong {
+  color: var(--gold);
+}
+
+/* || Shows */
+
+.show {
+  margin-block: 1.5rem;
+}
+
+.show > p {
+  margin-block: 0.2rem;
+}
+.show .description {
+  margin-left: 1.5rem;
+}
+
+.show .description::before {
+  content: '↳ ';
+}

@@ -1,0 +1,143 @@
+:root {
+  /* https://lospec.com/palette-list/slso8 */
+  --dark-blue: #0d2b45;
+  --med-blue: #203c56;
+  --purple: #544e68;
+  --pink: #8d697a;
+  --dark-orange: #d08159;
+  --bright-orange: #ffaa5e;
+  --gold: #ffd4a3;
+  --white: #ffecd6;
+}
+
+html {
+  line-height: 1.5;
+  background-color: var(--dark-blue);
+  color: var(--white);
+  font-family: 'Fira Sans', sans-serif;
+}
+
+span.email-obfuscation {
+  display: none;
+}
+
+/* || Footer */
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--pink);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to top, var(--dark-blue) 0%, transparent 100%);
+  color: var(--pink);
+  line-height: 1;
+}
+
+footer * {
+  margin: 0;
+  padding: 0;
+}
+
+.copyright {
+  padding-bottom: 0.5rem;
+  text-shadow: 2px 2px 0px var(--med-blue);
+}
+
+footer ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+
+footer ul li {
+  flex: 0;
+  padding-inline: 0.1rem;
+  margin-inline: 0.1rem;
+}
+
+footer img {
+  max-height: 2.5rem;
+  filter: drop-shadow(2px 2px 0px var(--med-blue));
+  transition: filter 0.2s;
+}
+
+footer a {
+  display: inline-block;
+}
+
+footer img:hover {
+  filter: drop-shadow(2px 2px 0px var(--white));
+}
+
+/* || Header */
+
+header {
+  position: fixed;
+  top: 0;
+  right: 1%;
+  z-index: 1;
+  font-size: calc(1.2rem + 0.25vw);
+  /* opacity: 0.9; */
+}
+
+/* || Box links */
+
+nav.box-link a {
+  margin: 1rem;
+  padding-inline: 0.6em;
+  background: var(--dark-blue);
+  box-shadow: 5px 5px var(--purple);
+  border: 2px solid var(--white);
+  color: var(--white);
+  display: block;
+  text-decoration: none;
+  transition: color 0.2s, background 0.2s, border-color 0.2s;
+  font-weight: 800;
+}
+
+nav.box-link a:focus,
+nav.box-link a:hover {
+  background: var(--white);
+  border-color: var(--white);
+  color: var(--dark-blue);
+}
+
+nav.box-link a:active {
+  background: var(--bright-orange);
+  border-color: var(--bright-orange);
+  color: var(--dark-blue);
+}
+
+/* || Skew */
+
+.skew {
+  transform: skewX(-5deg);
+}
+
+.skew > span {
+  display: block;
+  transform: skewX(5deg);
+}
+
+/* || General link */
+
+main a {
+  color: var(--bright-orange);
+}
+
+main a:focus,
+main a:hover {
+  color: var(--gold);
+  background-color: var(--med-blue); 
+}
+
+main a:active {
+  color: var(--gold);
+  background-color: var(--purple);
+}
