@@ -1,0 +1,22 @@
+[
+  {
+    "url": "/",
+    "label": "rice",
+    "title": "rice.band"
+  },
+  {
+    "url": "https://riceband.bandcamp.com",
+    "label": "listen",
+    "title": "rice recordings"
+  },
+  {
+    "url": "/shows",
+    "label": "shows",
+    "title": "rice performances"
+  },
+  {
+    "url": "/about",
+    "label": "about",
+    "title": "about rice"
+  }
+]

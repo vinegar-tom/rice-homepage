@@ -30,7 +30,7 @@ const cascade = (element, steps) => {
 
   steps += 1;
 
-  if (!element.classList.item(0)) return;
+  if (!element.classList.contains('cascade')) return;
 
   const target = {
     x: parseInt(element.classList.item(0).slice(1)),
@@ -71,7 +71,7 @@ document.addEventListener('touchmove', event => {
     event.touches[0].pageY
   );
 
-  if (newTarget !== touchTarget) {
+  if (newTarget !== touchTarget && newTarget.classList.contains('cascade')) {
     touchTarget = newTarget;
     cascade(touchTarget, 0);
   }
@@ -87,7 +87,7 @@ const createDivs = () => {
     for (let j = 0; j < columns; j++) {
       const div = document.createElement('div');
       populateCharacter(div);
-      div.className = `c${j} r${i}`;
+      div.className = `c${j} r${i} cascade`;
       app.appendChild(div);
 
       div.addEventListener('mouseover', () => cascade(div, 0));

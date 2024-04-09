@@ -1,0 +1,14 @@
+---
+layout: base.njk
+eleventyComputed:
+  title: "{{ title }} - rice.band"
+---
+
+<header>
+  <nav class="box-link">
+    <a href="/" title="home" class="skew">
+      <span>←</span>
+    </a>
+  </nav>
+</header>
+{{ content | safe }}

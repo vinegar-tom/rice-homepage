@@ -1,0 +1,39 @@
+---
+title: Shows
+layout: nav.njk
+css: [
+  "/styles/about.css"
+]
+---
+
+<main>
+  <h1><span>Shows</span></h1>
+
+  <section id="upcoming-shows">
+    <h2 class="skew"><span>Upcoming</span></h2>
+    {% for show in shows %}
+    {% if show.date | isUpcoming %}
+    <div class="show">
+      <p><time datetime="{{ show.date }}">{{ show.date | formatDate }}</time> @ {{ show.venue }}</p>
+      <p class="description">{{ show.description | safe }}</p>
+    </div>
+    {% endif %}
+    {% endfor %}
+
+    {% if shows | upcomingCount === 0 %}
+    <p>No upcoming shows . . .</p>
+    {% endif %}
+  </section>
+  
+  <section id="past-shows">
+    <h2 class="skew"><span>Past</span></h2>
+    {% for show in shows %}
+    {% if not show.date | isUpcoming %}
+    <div class="show">
+      <p><time datetime="{{ show.date }}">{{ show.date | formatDate }}</time> @ {{ show.venue }}</p>
+      <p class="description">{{ show.description | safe }}</p>
+    </div>
+    {% endif %}
+    {% endfor %}
+  </section>
+</main>

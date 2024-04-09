@@ -1,0 +1,21 @@
+---
+title: rice.band
+layout: base.njk
+css: [
+  "/styles/home.css"
+]
+---
+
+<main>
+  <nav class="main box-link">
+    <ul>
+      {% for link in navLinks %}
+      <li><a href="{{ link.url }}" title="{{ link.title }}" class="skew">
+        <span>{{ link.label }}</span>
+      </a></li>
+      {% endfor %}
+    </ul>
+  </nav>
+</main>
+<div id="app"></div>
+<script src="/scripts/home-background.js"></script>

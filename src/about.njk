@@ -1,0 +1,33 @@
+---
+title: About
+layout: nav.njk
+css: [
+  "/styles/about.css"
+]
+---
+
+<main>
+  <h1><span>About <i>rice</i></span></h1>
+
+  <h2 class="skew"><span>Bio</span></h2>
+
+  <p>Texture accumulating from grains; simple elements varied, superimposed, and contrasted. Dialogue without attribution, uncountable lines scoring an ambiguous scenography. Building another crystal liturgy.</p>
+
+  <p><i>rice</i> is <strong>James Blake</strong>, <strong>M. Harlan Engelmann</strong>, and <strong>Toby Ramaswamy</strong>, creating music with a focus on timbre and harmony. Intuitive forms explore the gradual processes of minimalism, or reflect the pacing of narrative media. Performing with analog synths, acoustic instruments, and a wide array of digital tools, <i>rice</i> is variously delicate or dense, and always strives for immersion.</p>
+
+  <p><i>rice</i> began in 2016 and is based in Minneapolis and Saint Paul, Minnesota. It continues to reexamine its compositional approach, developing new interfaces and techniques for interacting with instruments and shaping sound sources.</p>
+
+  <h2 class="skew"><span>Contact and links</span></h2>
+
+  <p>You can contact us via email at <a href="mailto:%72%69%63%65%2E%62%61%6E%64%2E%6D%6E%40%67%6D%61%69%6C%2E%63%6F%6D">rice.band.mn<span class="email-obfuscation">blah</span>@gmail.com</a> or on our <a href="https://www.instagram.com/rice.band" title="rice Instagram" target="_blank">Instagram</a> page.</p>
+
+  <p>Check out our other projects:</p>
+
+  <ul>
+    {% for link in otherLinks %}
+    <li><a href="{{ link.url }}" title="{{ link.title }}" target="_blank">
+      {{ link.label }}
+    </a></li>
+    {% endfor %}
+  </ul>
+</main>
