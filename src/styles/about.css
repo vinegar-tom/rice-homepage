@@ -41,6 +41,10 @@ main li {
   font-family: 'Libre Baskerville', serif;
 }
 
+::selection {
+  background-color: var(--purple);
+}
+
 nav {
   display: inline-block;
 }
@@ -64,4 +68,6 @@ strong {
 
 .show .description::before {
   content: '↳ ';
+  position: relative;
+  bottom: 0.25rem;
 }
