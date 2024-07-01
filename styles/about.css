@@ -28,9 +28,8 @@ h1 {
 
 h2 {
   font-size: calc(1.6rem + 0.4vw);
-  background-color: var(--dark-blue);
-  border-top: none;
-  border-left: none;
+  border: none;
+  border-left: 0.5rem solid var(--pink);
   box-shadow: none;
   margin-top: 2.5rem;
 }
