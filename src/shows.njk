@@ -10,7 +10,7 @@ css: [
   <h1><span>Shows</span></h1>
 
   <section id="upcoming-shows">
-    <h2 class="skew"><span>Upcoming</span></h2>
+    <h2><span>Upcoming</span></h2>
     {% for show in shows %}
     {% if show.date | isUpcoming %}
     <div class="show">
@@ -26,7 +26,7 @@ css: [
   </section>
   
   <section id="past-shows">
-    <h2 class="skew"><span>Past</span></h2>
+    <h2><span>Past</span></h2>
     {% for show in shows %}
     {% if not show.date | isUpcoming %}
     <div class="show">
