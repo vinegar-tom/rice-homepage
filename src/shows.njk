@@ -11,7 +11,7 @@ css: [
 
   <section id="upcoming-shows">
     <h2><span>Upcoming</span></h2>
-    {% for show in shows %}
+    {% for show in shows | reverse %}
     {% if show.date | isUpcoming %}
     <div class="show">
       <p><time datetime="{{ show.date }}">{{ show.date | formatDate }}</time> @ {{ show.venue }}</p>
