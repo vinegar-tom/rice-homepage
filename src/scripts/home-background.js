@@ -105,3 +105,32 @@ window.onresize = () => {
 }
 
 createDivs();
+
+const randCascade = (num) => {
+  const columns = Math.floor(windowSize.x / 28);
+  const rows = Math.floor(windowSize.y / 28) + 1;
+
+  var col = Math.floor(Math.random() * columns);
+  var row = Math.floor(Math.random() * rows);
+
+  var colVel = Math.floor(Math.random() * 3 - 1);
+  var rowVel = Math.floor(Math.random() * 3 - 1);
+  
+  while (num > 0) {
+    col += colVel;
+    row += rowVel;
+
+    setTimeout((col, row) => {
+      cascade(selectDiv(col, row), 0);
+    }, num * (40 + 10 * num), col, row);
+
+    num -= 1;
+  }
+};
+
+const autoCascade = () => {
+  randCascade(Math.floor(Math.random() * 5 + 2));
+  setTimeout(() => { autoCascade() }, Math.floor(Math.random() * 2500 + 500));
+};
+
+autoCascade();
