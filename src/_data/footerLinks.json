@@ -1,0 +1,22 @@
+[
+  {
+    "url": "https://riceband.bandcamp.com/",
+    "title": "rice on Bandcamp",
+    "imgUrl": "/images/icons8-bandcamp-button.svg"
+  },
+  {
+    "url": "https://www.instagram.com/rice.band/",
+    "title": "rice on Instagram",
+    "imgUrl": "/images/icons8-instagram.svg"
+  },
+  {
+    "url": "https://open.spotify.com/artist/5u0ViylYGaSNj65dV3RoHY",
+    "title": "rice on Spotify",
+    "imgUrl": "/images/icons8-spotify.svg"
+  },
+  {
+    "url": "https://music.apple.com/us/artist/rice/1750594069",
+    "title": "rice on Apple Music",
+    "imgUrl": "/images/icons8-apple-music.svg"
+  }
+]
