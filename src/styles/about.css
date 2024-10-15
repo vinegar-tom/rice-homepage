@@ -73,6 +73,11 @@ figcaption {
 
 .show {
   margin-block: 2rem;
+  transition: transform 0.5s;
+}
+
+.show:hover {
+  transform: scale(1.04);
 }
 
 .show > p {
