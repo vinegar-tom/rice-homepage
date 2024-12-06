@@ -69,6 +69,14 @@ figcaption {
   font-style: italic;
 }
 
+.epigraph {
+  text-align: center;
+  font-variant: small-caps;
+  letter-spacing: 0.1rem;
+  max-width: 35rem;
+  margin: auto;
+}
+
 /* || Shows */
 
 .show {
@@ -76,14 +84,11 @@ figcaption {
   padding: 0.5rem;
   border-radius: 0 0 0 2.5rem;
   border-bottom: 0 solid var(--dark-blue);
-  transition:
-    transform 0.6s ease-out,
-    border 0.6s linear;
+  transition: transform 0.3s ease-out;
 }
 
 .show:hover {
   transform: scale(1.02);
-  border-bottom: 0.4rem solid var(--pink);
 }
 
 .show > p {
