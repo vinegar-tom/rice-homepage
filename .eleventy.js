@@ -11,6 +11,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addWatchTarget('./src/scripts');
   eleventyConfig.addWatchTarget('./src/images');
 
+  eleventyConfig.addPassthroughCopy('./src/boss-name/');
+
   eleventyConfig.addFilter('formatDate', dateString => {
     const date = new Date(dateString);
     return date.toLocaleString('en-US', {

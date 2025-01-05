@@ -1,0 +1,41 @@
+/* general spacing & typography */
+html {
+  font-family: 'Ubuntu', sans-serif;
+  line-height: 1.6;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 0 1em;
+}
+
+h1 {
+  font-size: 4rem;
+  text-align: center;
+  font-family: 'Yatra One', cursive;
+}
+
+.boss {
+  margin: 0;
+}
+
+button.textbox {
+  font-size: 2rem;
+  border: 0.2em solid #000000;
+  border-radius: 0.5em;
+  padding: 0.8em;
+  background-image: linear-gradient(#ff9696, 30%, #910000);
+  color: #FFFFFF;
+  text-align: left;
+}
+
+button:active {
+  background-image: linear-gradient(to top, #ff9696, 70%, #910000);
+}
+
+/* flexbox */
+main {
+  display: flex;
+  flex-direction: column;
+}
