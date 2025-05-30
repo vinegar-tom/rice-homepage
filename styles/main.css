@@ -86,6 +86,11 @@ header {
   /* opacity: 0.9; */
 }
 
+#arrow-back a {
+  padding-inline: 0.3em;
+  padding-block: 0.2em;
+}
+
 /* || Box links */
 
 nav.box-link a {
@@ -140,4 +145,22 @@ main a:hover {
 main a:active {
   color: var(--gold);
   background-color: var(--purple);
+}
+
+/* || Icons */
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24;
+}
+
+main .material-symbols-outlined {
+  font-size: calc(1.2rem + 0.25vw);
+}
+
+header .material-symbols-outlined {
+  font-size: calc(1.5rem + 0.25vw);
 }

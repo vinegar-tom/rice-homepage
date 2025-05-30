@@ -97,9 +97,3 @@ figcaption {
 .show .description {
   margin-left: 1.5rem;
 }
-
-.show .description::before {
-  content: '↳ ';
-  position: relative;
-  bottom: 0.25rem;
-}
