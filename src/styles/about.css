@@ -107,7 +107,6 @@ figcaption {
 #albums img {
   max-width: calc(100% - 4px);
   border: 2px solid var(--dark-blue);
-  max-width: 100%;
   box-shadow: 0 0 1rem var(--gold);
 }
 
