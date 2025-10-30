@@ -21,6 +21,11 @@ module.exports = function(eleventyConfig) {
     });
   });
 
+  eleventyConfig.addFilter('year', dateString => {
+    const date = new Date(dateString);
+    return date.getFullYear();
+  });
+
   eleventyConfig.addFilter('isUpcoming', dateString => {
     const date = new Date(dateString);
     return date >= new Date();

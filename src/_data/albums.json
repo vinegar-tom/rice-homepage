@@ -1,0 +1,23 @@
+[
+  {
+    "url": "https://riceband.bandcamp.com/album/it-aint-coca-cola",
+    "title": "It Ain't Coca-Cola",
+    "releaseDate": "2025-06-27",
+    "coverFilename": "iacc-cover",
+    "label": {
+      "name": "Bumpy",
+      "site": "https://bumpy.bandcamp.com"
+    },
+    "description": "<i>rice</i>'s label debut and first release as a trio.<br/><br>Side A: Jittery vocals mingle with synthesized percussion and ominous drones—our love letter to Coil.<br/><br>Side B: Inspired by nostalgic Christmas movies and frozen lakes. Layering lush synth choruses and romantic melodies with resonant bells and biting metallic timbres, the slowly-evolving narrative structure lets you sink in and reminisce."
+  },
+  {
+    "url": "https://riceband.bandcamp.com/album/at-least-a-pound",
+    "title": "At Least a Pound",
+    "releaseDate": "2023-01-19",
+    "coverFilename": "alap-cover",
+    "label": {
+      "name": "self-released"
+    },
+    "description": "<i>rice</i>'s first release, comprised of early sets performed in 2015–2016 and recorded in 2016–2018. The band was a keyboard and percussion duo at the time.<br/><br>An in-depth description of the pieces can be found in the liner notes on Bandcamp, written by our good friend Mark Mahoney."
+  }
+]

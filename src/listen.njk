@@ -1,0 +1,31 @@
+---
+title: Listen
+layout: nav.njk
+css: [
+  "/styles/about.css"
+]
+---
+
+<main>
+  <h1><span>Listen</span></h1>
+
+  <section id="albums">
+    <h2><span>Albums</span></h2>
+    {% for album in albums %}
+    <div class="album">
+      <figure>
+        <picture>
+          <source srcset="/images/album-covers/{{ album.coverFilename }}.webp" type="image/webp">
+          <img src="/images/album-covers/{{ album.coverFilename }}.jpg" alt="{{ album.title }} cover">
+        </picture>
+      </figure>
+      <div>
+        <figcaption>
+          <h3><cite><a href="{{ album.url }}" title="{{ album.title }}" target="_blank">{{ album.title }}</a></cite> ({{ album.releaseDate | year }}, {% if album.label.site %}<a href="{{ album.label.site }}" title="{{ album.label.name }}" target="_blank">{% endif %}{{ album.label.name }}{% if album.label.site %}{% endif %}</a>)</h3>
+        </figcaption>
+        <p>{{ album.description | safe }}</p>
+      </div>
+    </div>
+    {% endfor %}
+  </section>
+</main>
