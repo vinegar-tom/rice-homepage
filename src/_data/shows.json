@@ -1,5 +1,10 @@
 [
   {
+    "date": "2026-02-07T09:20",
+    "venue": "Cedar Cultural Center",
+    "description": "<cite><a href=\"https://dronenotdrones.com/\">Drone Not Drones 11 (2026)</a></cite>."
+  },
+  {
     "date": "2025-12-28T19:00",
     "venue": "Icehouse",
     "description": "With Ivan Cunningham's Go For Blood."
@@ -22,7 +27,7 @@
   {
     "date": "2025-01-25T02:20",
     "venue": "Cedar Cultural Center",
-    "description": "<cite><a href=\"https://dronenotdrones.com/\">Drone Not Drones 2025</a></cite>."
+    "description": "<cite><a href=\"https://dronenotdrones.com/\">Drone Not Drones 10 (2025)</a></cite>."
   },
   {
     "date": "2025-01-09T20:00",
@@ -97,6 +102,6 @@
   {
     "date": "2024-01-27T09:00",
     "venue": "Cedar Cultural Center",
-    "description": "<cite><a href=\"https://drone-not-drones.bandcamp.com/album/drone-not-drones-the-9th-annual-28-hour-drone-minneapolis-2024\">Drone Not Drones 2024</a></cite>."
+    "description": "<cite><a href=\"https://drone-not-drones.bandcamp.com/album/drone-not-drones-the-9th-annual-28-hour-drone-minneapolis-2024\">Drone Not Drones 9 (2024)</a></cite>."
   }
 ]
