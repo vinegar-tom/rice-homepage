@@ -12,6 +12,11 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addWatchTarget('./src/images');
 
   eleventyConfig.addPassthroughCopy('./src/boss-name/');
+  // Favicon files
+  eleventyConfig.addPassthroughCopy('./src/*.png');
+  eleventyConfig.addPassthroughCopy('./src/*.ico');
+  eleventyConfig.addPassthroughCopy('./src/*.svg');
+  eleventyConfig.addPassthroughCopy('./src/site.webmanifest');
 
   eleventyConfig.addFilter('formatDate', dateString => {
     const date = new Date(dateString);
