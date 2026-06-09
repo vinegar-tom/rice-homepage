@@ -1,8 +1,8 @@
 const epi = document.querySelector('.epigraph > p');
 
 let shadowStr = '';
-const numShadows = 50;
-const distance = 150;
+const numShadows = 24;
+const distance = 140;
 
 for (let i = 0; i < numShadows; i++) {
   let shadow = 'rgb(from var(--white) r g b / 0.1)';
