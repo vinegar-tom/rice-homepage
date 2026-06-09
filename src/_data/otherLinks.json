@@ -1,8 +1,8 @@
 [
   {
-    "url": "https://mhengelmann.bandcamp.com",
-    "label": "M. Harlan Engelmann",
-    "title": "M. Harlan Engelmann on Bandcamp"
+    "url": "https://askserpent.bandcamp.com/",
+    "label": "askSERPENT",
+    "title": "askSERPENT on Bandcamp"
   },
   {
     "url": "https://chippu.bandcamp.com",
@@ -13,5 +13,25 @@
     "url": "https://fauxking.bandcamp.com/",
     "label": "Faux King",
     "title": "Faux King on Bandcamp"
+  },
+  {
+    "url": "https://mhengelmann.bandcamp.com",
+    "label": "M. Harlan Engelmann",
+    "title": "M. Harlan Engelmann on Bandcamp"
+  },
+  {
+    "url": "https://orderofthewiremother.bandcamp.com/",
+    "label": "Order of the Wire Mother",
+    "title": "Order of the Wire Mother on Bandcamp"
+  },
+  {
+    "url": "https://rltr.bandcamp.com/",
+    "label": "Robert Lehmann + Toby Ramaswamy",
+    "title": "Robert Lehmann + Toby Ramaswamy on Bandcamp"
+  },
+  {
+    "url": "https://straya.bandcamp.com",
+    "label": "Straya",
+    "title": "Straya on Bandcamp"
   }
 ]
