@@ -18,6 +18,8 @@ h2 {
   padding-inline: 1.5rem;
   font-weight: 800;
   width: fit-content;
+  position: relative;
+  z-index: 1;
 }
 
 h1 {
