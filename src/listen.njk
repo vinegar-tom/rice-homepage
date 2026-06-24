@@ -21,7 +21,7 @@ css: [
       </figure>
       <div>
         <figcaption>
-          <h3><cite><a href="{{ album.url }}" title="{{ album.title }}" target="_blank">{{ album.title }}</a></cite> ({{ album.releaseDate | year }}, {% if album.label.site %}<a href="{{ album.label.site }}" title="{{ album.label.name }}" target="_blank">{% endif %}{{ album.label.name }}{% if album.label.site %}{% endif %}</a>)</h3>
+          <h3><cite><a href="{{ album.url }}" title="{{ album.title }} on Bandcamp" target="_blank">{{ album.title }}</a></cite> ({{ album.releaseDate | year }}, {% if album.label.site %}<a href="{{ album.label.site }}" title="{{ album.label.name }} on Bandcamp" target="_blank">{% endif %}{{ album.label.name }}{% if album.label.site %}{% endif %}</a>)</h3>
         </figcaption>
         <p>{{ album.description | safe }}</p>
       </div>
