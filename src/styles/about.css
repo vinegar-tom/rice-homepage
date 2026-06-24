@@ -103,6 +103,14 @@ figcaption {
   margin-left: 1.5rem;
 }
 
+#past-shows h3 {
+  font-family: 'Libre Baskerville', serif;
+  text-align: center;
+  letter-spacing: 0.7rem;
+  text-shadow: 2px 2px var(--pink);
+  font-size: calc(1.4rem + 0.3vw);
+}
+
 /* || Albums */
 
 #albums img {
