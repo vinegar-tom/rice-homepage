@@ -3,10 +3,10 @@ on:
   push:
     branches:
       - main
-  
   schedule:
-    - cron: '0 1 * * *'
+    - cron: '28 1 * * *'
       timezone: 'America/Chicago'
+  workflow_dispatch:
 
 jobs:
   build:
